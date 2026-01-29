@@ -60,13 +60,16 @@ Example:
 ```
 (module
   (type (;0;) (func (param i32 result i32)))
-  (func (@metadata.code.hotness "\01") $test (type 0)
-    (@metadata.code.branch_hint "\00") if
+  (@metadata.code.hotness "\01")
+  (func $test (type 0)
+    (@metadata.code.branch_hint "\00")
+    if
       i32.const 0
       local.set 0
     end
     local.get 1
-    (@metadata.code.custom "aaa\13bb") return
+    (@metadata.code.custom "aaa\13bb")
+    return
   )
 )
 ```
